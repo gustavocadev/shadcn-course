@@ -6,6 +6,8 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import './tailwind.css';
+import { Toaster as SonnerToaster } from '~/components/ui/sonner';
+import { Toaster } from '~/components/ui/toaster';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -18,6 +20,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <SonnerToaster />
+        <Toaster />
         <ScrollRestoration />
         <Scripts />
       </body>
